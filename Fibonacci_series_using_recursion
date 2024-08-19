@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Fibonacci_series_using_recursion {
+	public static int fibo(int n) {
+		if(n<=1) {
+			return n;
+		}
+		else {
+			return fibo(n-1)+fibo(n-2);
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.print("Enter the range: ");
+		int n=s.nextInt();
+		System.out.println("Fibonacci sequence (Recursive): ");
+		int a=0,b=1;
+		System.out.println(a);
+		System.out.println(b);
+		for(int i=2;i<n;i++) {
+			System.out.println(fibo(i));
+		}
+
+	}
+
+}
