@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Ass_Operator_example {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.print("Enter the weight of object1: ");
+		double a=s.nextDouble();
+		System.out.print("Enter the weight of object2: ");
+		double b=s.nextDouble();
+		System.out.println("Relation between object1 and object2:");
+		System.out.println("object1 == object2 = "+(a==b));
+		System.out.println("object1 != object2 = "+(a!=b));
+		System.out.println("object1 > object2 = "+(a>b));
+		System.out.println("object1 < object2 = "+(a<b));
+		System.out.println("object1 >= object2 = "+(a>=b));
+		System.out.println("object1 <= object2 = "+(a<=b));
+
+	}
+
+}
