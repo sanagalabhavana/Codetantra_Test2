@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Fibonaci_using_recursion_and_non_recursion {
+	public static int Non_recursion(int n) {
+		int a[]=new int[n+2];
+		a[0]=0;
+		a[1]=1;
+		for(int i=2;i<=n;i++) {
+			a[i]=a[i-1]+a[i-2];
+		}
+		return a[n];
+	}
+
+	public static int recursion(int n) {
+		if(n<=1) {
+			return n;
+		}
+		else {
+			return recursion(n-1)+recursion(n-2);
+		}
+	}
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.print("Enter the fibonacci number: ");
+		int n=s.nextInt();
+		System.out.println("Fibonacci series non-recursion");
+		
+		for(int i=0;i<n;i++) {
+		 System.out.print(Non_recursion(i)+" " );
+		}
+		System.out.println();
+		System.out.println("Fibonacci series recursion");  
+		for(int i=0;i<n;i++) {
+			System.out.print(recursion(i)+ " ");
+		}
+	}
+
+}
